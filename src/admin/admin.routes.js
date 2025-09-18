@@ -1,8 +1,7 @@
 // admin.routes.js
 // Route definitions for admins will go here.
+import { Router } from 'express';
 
-const express = require('express');
-const router = express.Router();
 
 // Define admin routes here
 
