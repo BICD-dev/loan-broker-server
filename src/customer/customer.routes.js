@@ -1,8 +1,9 @@
 // customer.routes.js
 // Route definitions for customers will go here.
+import { Router } from 'express';
 
-const express = require('express');
-const router = express.Router();
+const router = Router();
+
 
 // Define customer routes here
 
