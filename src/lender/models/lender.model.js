@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const lenderSignupSchema = mongoose.Schema({
+const lenderSchema = mongoose.Schema({
     fullName:{
         type:String,
         required:true,
@@ -21,6 +21,6 @@ const lenderSignupSchema = mongoose.Schema({
     timestamps:true
 })
 
-const lenderSignup = mongoose.model('lender',lenderSignupSchema)
+const lender = mongoose.model('lender',lenderSchema)
 
-export default lenderSignup
+export default lender
