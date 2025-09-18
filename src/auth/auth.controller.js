@@ -1,0 +1,36 @@
+
+import { loginService, signupService } from './auth.service';
+
+
+const loginController = async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    const result = await loginService(email, password);
+    if (result.success) {
+      res.status(200).json(result);
+    } else {
+      res.status(400).json(result);
+    }
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Server error", error: error.message });
+  }
+};
+
+const signupController = async (req, res) => {
+  try {
+    const { fullName, email, password, phoneNumber } = req.body;
+    const result = await signupService({ fullName, email, password, phoneNumber });
+    if (result.success) {
+      res.status(201).json(result);
+    } else {
+      res.status(400).json(result);
+    }
+  } catch (error) {
+    res.status(500).json({ success: false, message: "Server error", error: error.message });
+  }
+};
+
+module.exports = {
+  loginController,
+  signupController
+};

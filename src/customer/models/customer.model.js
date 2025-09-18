@@ -1,22 +1,10 @@
 import mongoose from 'mongoose'
 
 const CustomerSchema = mongoose.Schema({
-    fullName:{
-        type:String,
+    user_id:{
+        type:mongoose.Schema.Types.ObjectId,
         required:[true,"Please input your full name"],
     },
-    email:{
-        type:String,
-        required:true
-    },
-    phoneNumber:{
-        type:String,
-        required:true
-    },
-    password:{
-        type:String,
-        required:true
-    }
 },{
     timestamps:true
 })
