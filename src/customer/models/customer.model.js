@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const CustomerSignupSchema = mongoose.Schema({
+const CustomerSchema = mongoose.Schema({
     fullName:{
         type:String,
         required:[true,"Please input your full name"],
@@ -21,6 +21,6 @@ const CustomerSignupSchema = mongoose.Schema({
     timestamps:true
 })
 
-const CustomerSignup = mongoose.model('customer',CustomerSignupSchema)
+const Customer = mongoose.model('customer',CustomerSchema)
 
-export default CustomerSignup
+export default Customer
