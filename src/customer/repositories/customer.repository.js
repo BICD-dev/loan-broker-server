@@ -1,5 +1,5 @@
 import mongoose from 'mongoose'
-import Customer from '../models/customer.models.js'
+import Customer from '../models/customer.model.js'
 
 //takes in email and returns the specific customer
 export const getCustomerByEmail = async (email) => {

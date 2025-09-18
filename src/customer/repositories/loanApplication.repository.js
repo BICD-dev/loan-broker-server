@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import CustomerLoanApplication from "../models/loanApplication.model";
+import CustomerLoanApplication from "../models/loanApplication.model.js";
 
 export const create = async(data)=>{
     try{

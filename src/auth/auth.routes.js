@@ -1,12 +1,14 @@
 import { Router } from "express";
-import { loginController, signupController } from "./auth.service.js";
-import authenticate from "../middleware/auth.js";
+import { loginController, signupController } from "./auth.controller.js";
+import {authenticate} from "../utils/middleware/auth.js";
 
 const router = Router();
 
-// use middleware
+
+router.post("/signup", signupController);
+router.post("/login", loginController);
+
+// use authenticate middleware for checking jwt
 router.use(authenticate);
-// Define auth routes here
-router.post('/signup', signupController);
-router.post('/login', loginController);
-module.exports = router;
+
+export default router;

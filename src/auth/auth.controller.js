@@ -1,8 +1,7 @@
+import { loginService, signupService } from './auth.service.js';
 
-import { loginService, signupService } from './auth.service';
 
-
-const loginController = async (req, res) => {
+export const loginController = async (req, res) => {
   try {
     const { email, password } = req.body;
     const result = await loginService(email, password);
@@ -16,7 +15,7 @@ const loginController = async (req, res) => {
   }
 };
 
-const signupController = async (req, res) => {
+export const signupController = async (req, res) => {
   try {
     const { fullName, email, password, phoneNumber } = req.body;
     const result = await signupService({ fullName, email, password, phoneNumber });
@@ -28,9 +27,4 @@ const signupController = async (req, res) => {
   } catch (error) {
     res.status(500).json({ success: false, message: "Server error", error: error.message });
   }
-};
-
-module.exports = {
-  loginController,
-  signupController
 };

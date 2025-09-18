@@ -1,14 +1,12 @@
-import { create, getUserByEmail } from "./repositories/user.repository";
+import { create, getUserByEmail } from "./repositories/user.repository.js";
 import bycrypt from "bcrypt";
-import generateToken from "../utils/jwt/generateToken";
-import { hashPassword } from "../utils/bycrypt/bycrypt.service";
-import { create as createCustomer } from "../customer/repositories/customer.repository";
-import { getUserByEmail } from "../repositories/user.repository";
-import generateToken from "../utils/jwt/generateToken";
+import generateToken from "../utils/jwt/generateToken.js";
+import { hashPassword } from "../utils/bycrypt/bycrypt.service.js";
+import { create as createCustomer } from "../customer/repositories/customer.repository.js";
 
 
 
-const signupService = async (signupData) => {
+export const signupService = async (signupData) => {
   const { fullName, email, password, phoneNumber } = signupData;
   // check if all fields are filled
   if (!fullName || !email || !password || !phoneNumber) {
@@ -46,7 +44,7 @@ const signupService = async (signupData) => {
 }
 
 
-const loginService = async (loginData) => {
+export const loginService = async (loginData) => {
   const { email, password } = loginData;
   const user = await getUserByEmail(email);
   // check if user exists
@@ -69,9 +67,4 @@ const loginService = async (loginData) => {
     token: token,
   };
   return successMessage;
-};
-
-module.exports = {
-  signupService,
-  loginService
 };
