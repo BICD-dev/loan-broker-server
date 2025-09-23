@@ -1,5 +1,5 @@
-import { findAll } from "./repositories/customer.repository";
-import { create,findAll as findLoans } from "./repositories/loanApplication.repository";
+import { findAll } from "./repositories/customer.repository.js";
+import { create,findAll as findLoans } from "./repositories/loanApplication.repository.js";
 
 export const ApplicationService = async (loanData) => {
     const {customer_id,lender_id,name,dateOfBirth,email,phoneNumber,address,employment_status,monthly_income,loan_type,loan_amount,loan_term,interest_type,approval_status} = loanData;

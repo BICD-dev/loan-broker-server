@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { attatchedLoanController, updateStatusController } from "./lender.controller";
+import { attatchedLoanController, updateStatusController } from "./lender.controller.js";
 
 const router = Router()
 

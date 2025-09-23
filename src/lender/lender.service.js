@@ -3,7 +3,7 @@
 // view loan details
 // the frontend can get the approval status and the customer id from the data
 
-import { findAll, findAll as findLoans, update } from "../customer/repositories/loanApplication.repository";
+import { findAll, findAll as findLoans, update } from "../customer/repositories/loanApplication.repository.js";
 
 // also this shows all the loans attatched to a specific lender
 export const attatchedLoanService = async (lender_id)=>{

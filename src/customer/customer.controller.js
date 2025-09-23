@@ -1,4 +1,4 @@
-import { ApplicationService, LoanDetailsService } from "./customer.service"
+import { ApplicationService, LoanDetailsService } from "./customer.service.js"
 
 export const loanController = async (req,res) =>{
   

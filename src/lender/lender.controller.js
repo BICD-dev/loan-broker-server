@@ -1,4 +1,4 @@
-import { attatchedLoanService, updateStatusService } from "./lender.service"
+import { attatchedLoanService, updateStatusService } from "./lender.service.js"
 
 export const updateStatusController = async (req,res) =>{
     try {

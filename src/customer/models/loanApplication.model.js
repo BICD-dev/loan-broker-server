@@ -18,15 +18,15 @@ const CustomerLoanApplicationSchema = mongoose.Schema({
         required:true
     },
     email:{
-        type:string,
+        type:String,
         required:true
     },
     address:{
-        type:string,
+        type:String,
         required:true
     },
     phoneNumber:{
-        type:string,
+        type:String,
         required:true
     },
     employement_status:{
@@ -63,7 +63,7 @@ const CustomerLoanApplicationSchema = mongoose.Schema({
         required:true
     },
     approval_status:{
-        type:string,
+        type:String,
         enum:["pending","approved","rejected"],
         default:"pending"
     }
