@@ -3,8 +3,7 @@ import { loginService, signupService } from './auth.service.js';
 
 export const loginController = async (req, res) => {
   try {
-    const { email, password } = req.body;
-    const result = await loginService(email, password);
+    const result = await loginService(req.body);
     if (result.success) {
       res.status(200).json(result);
     } else {
@@ -17,8 +16,7 @@ export const loginController = async (req, res) => {
 
 export const signupController = async (req, res) => {
   try {
-    const { fullName, email, password, phoneNumber } = req.body;
-    const result = await signupService({ fullName, email, password, phoneNumber });
+    const result = await signupService(req.body);
     if (result.success) {
       res.status(201).json(result);
     } else {
