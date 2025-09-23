@@ -3,7 +3,7 @@ import mongoose from 'mongoose'
 const CustomerSchema = mongoose.Schema({
     user_id:{
         type:mongoose.Schema.Types.ObjectId,
-        required:[true,"Please input your full name"],
+        required:true,
     },
 },{
     timestamps:true

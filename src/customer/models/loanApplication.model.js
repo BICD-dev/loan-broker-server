@@ -1,13 +1,17 @@
 import mongoose from 'mongoose'
 
 const CustomerLoanApplicationSchema = mongoose.Schema({
-    user_id:{
-        type:string,
+    customer_id:{
+        type:mongoose.Schema.Types.ObjectId,
+        required:true
+    },
+    lender_id:{
+        type:mongoose.Schema.Types.ObjectId,
         required:true
     },
     name:{
         type:String,
-        required:[true,"Please input your full name"],
+        required:true,
     },
     dateOfBirth:{
         type:Date,

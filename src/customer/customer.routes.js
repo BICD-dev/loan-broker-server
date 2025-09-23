@@ -1,10 +1,10 @@
-// customer.routes.js
-// Route definitions for customers will go here.
 import { Router } from 'express';
+import { loanController, loanDetailsController } from './customer.controller';
 
 const router = Router();
 
 
-// Define customer routes here
+router.post('/loan',loanController) //apply for loan
+router.get('/loan',loanDetailsController) //get loan for a specific customer
 
-module.exports = router;
+export default router;
